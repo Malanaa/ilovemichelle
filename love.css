@@ -1,10 +1,7 @@
-/* Explanation in JS tab */
-
-/* Cool font from Google Fonts! */
-@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
 
 body {
 	margin: 0px;
+    background-color: #ec4434;
 }
 
 #container {
@@ -22,14 +19,167 @@ body {
 
 /* Your average text styling */
 #text1, #text2 {
+    color: white;
 	position: absolute;
 	width: 100%;
 	display: inline-block;
 	
-	font-family: 'Raleway', sans-serif;
-	font-size: 80pt;
+    font-family: "Grandstander", cursive;
+    font-size: 80pt;
 	
 	text-align: center;
 	
 	user-select: none;
 }
+
+#finalText {
+    color: white;
+    font-family: "Grandstander", cursive;
+    font-size: 10pt;
+    margin-top: 200pt;
+    text-align: center;
+}
+
+
+
+#background-images div {
+    position: absolute;
+    width: 100px; /* Example size, adjust as necessary */
+    height: 100px; /* Example size, adjust as necessary */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Ensure the images stay in the background */
+}
+
+#image1 {
+    top: 355px;
+    left: 93px;
+    background-image: url('images/1.png');
+}
+
+#image2 {
+    top: 10px;
+    right: 60px;
+    background-image: url('images/2.png');
+}
+
+#image3 {
+    bottom: 148px;
+    left: 307px;
+    background-image: url('images/3.png');
+}
+
+#image4 {
+    bottom: 218px;
+    right: 23px;	
+    background-image: url('images/1.png');
+
+}
+
+#image11 {
+    top: 25px;
+	left: 7px;
+    background-image: url('images/1.png');
+}
+
+#image22 {
+    top: 550px;
+    right: 571px;
+    background-image: url('images/2.png');
+}
+
+#image33 {
+    bottom: 479px;
+    left: 420px;
+    background-image: url('images/3.png');
+}
+
+#image44 {
+	bottom: 380px;
+    right: 233px;
+    background-image: url('images/1.png');
+
+}
+@keyframes shake {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(-45deg);
+    }
+    50% {
+        transform: rotateZ(-0deg);
+    }
+    75% {
+        transform: rotateZ(45deg);
+    }
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
+
+@keyframes shakeop {
+    0%, 100% {
+        transform: rotateZ(0deg);
+    }
+    25% {
+        transform: rotateZ(45deg);
+    }
+    50% {
+        transform: rotateZ(0deg);
+    }
+    75% {
+        transform: rotateZ(-45deg);
+    }
+	100% {
+		transform: rotateZ(0deg);
+	}
+}
+
+#image1,  #image3,  #image22, #image33, #image4 {
+    animation: shake 17s infinite alternate;
+}
+#image2, #image11, #image33, #image44 {
+	animation: shakeop 17s infinite alternate;
+
+
+}
+
+html {
+    user-select: none;
+}
+
+#navigate-timeline-button-container {
+    position: fixed; /* Use fixed to ensure it stays in place regardless of scrolling */
+    left: 50%; /* Center horizontally */
+    bottom: 190px; /* Distance from bottom */
+    transform: translateX(-50%); /* Adjust horizontally to truly center it */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.navigate-timeline-button {
+    padding: 10px 20px;
+    background-color: #ec4434;
+    color: #ffffff; /* Match the theme */
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: "Grandstander", cursive;
+    font-size: 16pt;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navigate-timeline-button:hover {
+    background-color: #ffffff;
+    color: #ec4434;
+}
+
+.navigate-timeline-button {
+    /* existing styles */
+    display: none; 
+    transform: translateY(20px); /* Start the button slightly off its final position for the animation */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out/* Add this line to hide the button initially */
+}
+
+
+

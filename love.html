@@ -6,11 +6,17 @@
     <title>Document</title>
     <script type="module" src="love.js"></script>
     <link rel="stylesheet" href="love.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Explanation in JS tab -->
+    <audio id="fate" autoplay loop>
+        <source  id="background-audio" src="audios/fate.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 
-<!-- The two texts -->
+
 <div id="container">
 	<span id="text1"></span>
 	<span id="text2"></span>
@@ -30,5 +36,28 @@
 		</filter>
 	</defs>
 </svg>
+
+<div id="container">
+    <span id="text1"></span>
+    <span id="text2"></span>
+</div>
+
+
+<div id="background-images">
+    <div id="image1"></div>
+    <div id="image2"></div>
+    <div id="image4"></div>
+    <div id="image3"></div>
+    <div id="image11"></div>
+    <div id="image22"></div>
+    <div id="image44"></div>
+    <div id="image33"></div>
+</div>
+
+<div id="navigate-timeline-button-container">
+    <a rel="preload" href="timeline.html" class="navigate-timeline-button">Why?</a>
+</div>
+
+
 </body>
 </html>

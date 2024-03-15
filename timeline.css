@@ -1,0 +1,107 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ec4434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#image-container {
+    width: 250px;
+    height: 400px;
+    z-index: 10;
+    position: relative;
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 5px solid white; /* White border */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure the border radius applies cleanly */
+    background-color: #ec4434;
+
+}
+
+#changeable-image {
+    max-width: 100%; /* Ensure the image does not overflow the container */
+    max-height: 100%; /* Adjust the image height to maintain aspect ratio */
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+    /* Remove width and height properties to respect max-width and max-height */
+}
+
+.bg-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100px; /* Smaller size */
+    height: 100px; /* Smaller size */
+    z-index: -1;
+}
+
+/* Apply the normal rotation to the first half */
+.bg-image:nth-child(odd) {
+    animation: rotateBg 60s linear infinite;
+}
+
+/* Apply the reverse rotation to the second half */
+.bg-image:nth-child(even) {
+    animation: rotateBgReverse 60s linear infinite;
+}
+
+/* Random positioning */
+.bg-image:nth-child(1) { top: 10%; left: 10%; }
+.bg-image:nth-child(2) { top: 5%; left: 60%; }
+.bg-image:nth-child(3) { top: 20%; left: 36%; }
+.bg-image:nth-child(4) { top: 20%; left: 90%; }
+.bg-image:nth-child(5) { top: 60%; left: 12%; }
+.bg-image:nth-child(6) { top: 70%; left: 83%; }
+.bg-image:nth-child(7) { top: 90%; left: 30%; }
+.bg-image:nth-child(8) { top: 86%; left: 70%; }
+.bg-image:nth-child(9) { top: 10%; left: 3%; }
+/* Continue with your pattern for additional images */
+
+@keyframes rotateBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes rotateBgReverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+}
+
+
+#image-container {
+    width: 250px;
+    height: 400px;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #e25346;
+    text-align: center;
+    color: white; /* Text color */
+    padding: 20px; /* To prevent text from touching the borders */
+    font-family: 'Grandstander', sans-serif; /* Specify your font family */
+    font-size: 60px; /* Adjust font size as needed */
+}
+
+body, #image-container, #changeable-text {
+    /* Existing styles */
+    user-select: none; /* Prevent text selection */
+}
+
+.smallerclick{
+    font-size: 20pt;
+    margin-top: 40%;
+}
