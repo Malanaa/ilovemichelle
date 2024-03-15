@@ -177,3 +177,217 @@ body, #image-container, #changeable-text {
   transition: all 0.2s ease-in-out;
   opacity: 1;
 }
+
+
+@media (max-width: 800px) {
+    
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ec4434;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+
+  #image-container {
+    width: 250px;
+    height: 400px;
+    z-index: 10;
+    position: relative;
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    border: 5px solid white; /* White border */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure the border radius applies cleanly */
+    background-color: #ec4434;
+
+  }
+
+  #changeable-image {
+    max-width: 100%; /* Ensure the image does not overflow the container */
+    max-height: 100%; /* Adjust the image height to maintain aspect ratio */
+    transition: opacity 0.5s ease;
+    cursor: pointer;
+    /* Remove width and height properties to respect max-width and max-height */
+  }
+
+  .bg-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 100px; /* Smaller size */
+    height: 100px; /* Smaller size */
+    z-index: -1;
+  }
+
+  /* Apply the normal rotation to the first half */
+  .bg-image:nth-child(odd) {
+    animation: rotateBg 60s linear infinite;
+  }
+
+  /* Apply the reverse rotation to the second half */
+  .bg-image:nth-child(even) {
+    animation: rotateBgReverse 60s linear infinite;
+  }
+
+  /* Random positioning */
+  .bg-image:nth-child(1) { top: 10%; left: 10%; }
+  .bg-image:nth-child(2) { top: 5%; left: 60%; }
+  .bg-image:nth-child(3) { top: 20%; left: 36%; }
+  .bg-image:nth-child(4) { top: 20%; left: 90%; }
+  .bg-image:nth-child(5) { top: 60%; left: 12%; }
+  .bg-image:nth-child(6) { top: 70%; left: 83%; }
+  .bg-image:nth-child(7) { top: 90%; left: 30%; }
+  .bg-image:nth-child(8) { top: 86%; left: 70%; }
+  .bg-image:nth-child(9) { top: 10%; left: 3%; }
+  /* Continue with your pattern for additional images */
+
+  @keyframes rotateBg {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes rotateBgReverse {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+
+
+  #image-container {
+    width: 280px;
+    height: 400px;
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid white;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #df6459;
+    text-align: center;
+    color: white; /* Text color */
+    padding: 20px; /* To prevent text from touching the borders */
+    font-family: 'Grandstander', sans-serif; /* Specify your font family */
+    font-size: 60px; /* Adjust font size as needed */
+  }
+
+  body, #image-container, #changeable-text {
+    /* Existing styles */
+    user-select: none; /* Prevent text selection */
+  }
+
+  .smallerclick{
+    font-size: 20pt;
+    margin-top: 40%;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+  .navMenu {
+  position: absolute;
+  top: 15%;
+  left: 52%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 15px;
+  display: flex; /* Use flexbox for the nav items */
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Align items vertically */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  width: 100%; /* Ensure it spans the full width */
+  padding: 0 0px; /* Add some padding on the sides */
+  position: absolute; /* Ensure dot is positioned relatively to navMenu */
+
+  }
+
+  .navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 90px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Grandstander', sans-serif;
+  margin: 0 -10px; /* Adjust spacing between links */
+  white-space: nowrap;  
+
+  }
+
+  .navMenu a:hover {
+  color: #f59188;
+  }
+
+  .navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  bottom: -9px; /* Position below the links */
+  left: 0px;
+  }
+
+  .navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  left: 90px;
+  }
+
+  .navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(110px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  left: 80px;
+  }
+
+  .navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  left: 55px;
+  }
+
+  .navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(285px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  left: 40px;
+  }
+
+}
+
+#image-container, .navMenu, .navMenu a {
+  /* Example transition property */
+  transition: all 1s ease;
+}
+
+@media (min-width: 601px) and (max-width: 800px) {
+  .navMenu a {
+    left: 2px; /* Temporarily smaller font size */
+  }
+}
+

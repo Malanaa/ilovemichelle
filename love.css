@@ -183,3 +183,65 @@ html {
 
 
 
+@media (max-width: 800px) {
+    #image1 {
+        top: 350px;
+        left: 10px;
+        background-image: url('images/1.png');
+    }
+    
+    #image2 {
+        top: 15px;
+        right: 70px;
+        background-image: url('images/2.png');
+    }
+    
+    #image3 {
+        bottom: 98px;
+        left: 307px;
+        background-image: url('images/3.png');
+    }
+    
+    #image4 {
+        bottom: 228px;
+        right: 03px;	
+        background-image: url('images/1.png');
+    
+    }
+    
+    #image11 {
+        top: 25px;
+        left: 7px;
+        background-image: url('images/1.png');
+    }
+    
+    #image22 {
+        top: 580px;
+        right: 390px;
+        background-image: url('images/2.png');
+        
+    }
+    
+    #image33 {
+        bottom: 440px;
+        left: 400px;
+        background-image: url('images/3.png');
+
+    }
+    
+    #image44 {
+        bottom: 300px;
+        right: 233px;
+        background-image: url('images/1.png');
+        
+    }
+}
+
+#image11, #image2, #image3, #image4, #image11, #image22, #image33, #image44{
+    /* Example transition property */
+    transition: all 1s ease;
+  }
+  #image22 {
+    transition: all 1s ease;
+    
+}

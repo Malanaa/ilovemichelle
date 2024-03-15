@@ -219,4 +219,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 6000); // This duration should match the transition duration
     }, 100); // A short delay before starting the fade-out, adjust as needed
 });
-``
+
+
