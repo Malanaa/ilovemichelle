@@ -1,5 +1,4 @@
-
-
+  
 body {
     margin: 0;
     padding: 0;
@@ -88,7 +87,7 @@ body {
     border: 5px solid white;
     border-radius: 15px;
     overflow: hidden;
-    background-color: #e25346;
+    background-color: #df6459;
     text-align: center;
     color: white; /* Text color */
     padding: 20px; /* To prevent text from touching the borders */
@@ -104,4 +103,77 @@ body, #image-container, #changeable-text {
 .smallerclick{
     font-size: 20pt;
     margin-top: 40%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+
+.navMenu {
+  position: absolute;
+  top: 90%;
+  left: 51%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 80px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-family: 'Grandstander', sans-serif; 
+
+}
+
+.navMenu a:hover {
+  color: #f59188;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(110px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(285px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
 }
