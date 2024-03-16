@@ -1,0 +1,2 @@
+bhecause of my relectuance to work with a server side framewark.
+what im gonna do is add images manually and use a python script gui to add them.

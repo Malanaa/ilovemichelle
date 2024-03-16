@@ -152,7 +152,7 @@ html {
 #navigate-timeline-button-container {
     position: fixed; /* Use fixed to ensure it stays in place regardless of scrolling */
     left: 50%; /* Center horizontally */
-    bottom: 190px; /* Distance from bottom */
+    bottom: 160px; /* Distance from bottom */
     transform: translateX(-50%); /* Adjust horizontally to truly center it */
     z-index: 1000; /* Ensure it's above other elements */
 }
