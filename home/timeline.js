@@ -34,13 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     containerElement.addEventListener("click", handleClick);
 });
 
-document.addEventListener('click', function() {
-    const audio = document.getElementById('background-audio');
-    // Check if the audio is not already playing
-    if (audio.paused) {
-        audio.play();
-    }
-});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Create an overlay element

@@ -1,10 +1,3 @@
-document.addEventListener('click', function() {
-    const audio = document.getElementById('fate');
-    // Check if the audio is not already playing
-    if (audio.paused) {
-        audio.play();
-    }
-});
 
 const elts = {
     text1: document.getElementById("text1"),
