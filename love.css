@@ -184,6 +184,10 @@ html {
 
 
 @media (max-width: 800px) {
+
+    #finalText {
+        font-size: 8pt;
+    }
     #image1 {
         top: 350px;
         left: 10px;
@@ -237,7 +241,7 @@ html {
     }
 }
 
-#image11, #image2, #image3, #image4, #image11, #image22, #image33, #image44{
+#image11, #image2, #image3, #image4, #image11, #image22, #image33, #image44 {
     /* Example transition property */
     transition: all 1s ease;
   }
