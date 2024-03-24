@@ -251,8 +251,3 @@ html {
 }
 
 
-@media (min-width: 1300px) {
-    #finalText {
-        margin-top: 350px;
-    }
-}
