@@ -214,5 +214,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-
-console.log("just for fun")
