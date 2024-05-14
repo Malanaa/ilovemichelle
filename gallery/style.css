@@ -17,10 +17,7 @@ body {
 
 }
 
-#title{
-    color: white;
-    font-size: 2vh;
-}
+
 
 
 #background-images div {
@@ -129,7 +126,6 @@ body {
 
 @media (max-width: 800px) {
 
-    #demo
     #image1 {
         top: 350px;
         left: 10px;
@@ -194,17 +190,10 @@ body {
 
 @media (max-width: 390px) {
     body{
-        display: block;
+        display: flex;
     }
     #demo{
-        margin-left: 50px;
-        margin-top: 200px;
-        align-self: center;
-        font-size: 20px;
-
-    }
-    #title{
-        display: none;
+        font-size: 30px;
     }
     #image1 {
         top: 350px;
