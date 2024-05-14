@@ -1,20 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="notes.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Countdown</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>gallery</title>
 </head>
-<body>
-    <div class="middletext">
+    </head>
+    <body>
+        <p id="title">Time till we hug again !!!!</p>
+        <p  class="font" id="demo"> </p>
         
-    <p >
-        Still working on this page shelly, I love you though. This will be cool gallery
-    </p>
-    </div>
-</body>
+        <!-- Adding JavaScript code -->
+        <script>
+            // Converting string to required date format 
+            let deadline = new Date("Aug 8, 2024 3:30:00")
+                            .getTime();
+ 
+            // To call defined fuction every second
+            let x = setInterval(function () {
+                 
+                // Getting current time in required format
+                let now = new Date().getTime();
+ 
+                // Calculating the difference
+                let t = deadline - now;
+ 
+                // Getting value of days, hours, minutes, seconds
+                let days = Math.floor(t / (1000 * 60 * 60 * 24));
+                let hours = Math.floor(
+                    (t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor(
+                    (t % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor(
+                    (t % (1000 * 60)) / 1000);
+ 
+                // Output the remaining time
+                document.getElementById("demo").innerHTML =
+                    days + "d " + hours + "h " + 
+                    minutes + "m " + seconds + "s ";
+ 
+                // Output for over time
+                if (t < 0) {
+                    clearInterval(x);
+                    document.getElementById("demo")
+                            .innerHTML = "EXPIRED";
+                }
+            }, 1000);
+        </script>
+
+<div id="background-images">
+    <div id="image1"></div>
+    <div id="image2"></div>
+    <div id="image4"></div>
+    <div id="image3"></div>
+    <div id="image11"></div>
+    <div id="image22"></div>
+    <div id="image44"></div>
+    <div id="image33"></div>
+</div>
+    </body>
 </html>
